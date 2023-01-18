@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My portfolio</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <img class="header__logo" src="./assets/gif/logo.gif" alt="logo">
+      <nav class="header__nav" id="navbar">
+        <ul class="header__menu menu">
+          <li class="menu__item"><a class="link link--hover" href="#welcome-section">Home</a></li>
+          <li class="menu__item"><a class="link link--hover" href="#about">About</a></li>
+          <li class="menu__item"><a class="link link--hover" href="#skills">Skills</a></li>
+          <li class="menu__item"><a class="link link--hover" href="#projects">Projects</a></li>
+          <li class="menu__item"><a class="link link--hover" href="#profile-link">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="header__btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="header__burger-menu menu">
+        <li class="menu__item"><a class="link link--hover" href="#welcome-section">Home</a></li>
+        <li class="menu__item"><a class="link link--hover" href="#about">About</a></li>
+        <li class="menu__item"><a class="link link--hover" href="#skills">Skills</a></li>
+        <li class="menu__item"><a class="link link--hover" href="#projects">Projects</a></li>
+        <li class="menu__item"><a class="link link--hover" href="#profile-link">Contacts</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero" id="welcome-section">
+      <div class="hero__container">
+        <img class="hero__photo" src="./assets/img/hero.jpg" alt="hero__photo">
+        <div class="hero__info">
+          <h1 class="hero__title">
+            Hello, <br>
+            I'm Lina, <br>
+            <span>Frontend</span> <br>
+            Developer
+          </h1>
+          <div class="hero__cv">
+            <a class="hero__link link link--hover" href="assets/CV.pdf" download="CV.pdf" target="_blank">
+              <img src="./assets/gif/download_icon.gif" alt="download_CV">
+              <span>DOWNLOAD CV</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about__container">
+        <h2 class="title">About me</h2>
+        <div class="about__content">
+          <p class="about__text">I always wanted to be a programmer. When I worked as an accountant, I used the 1C program.
+            One day I didn’t have enough functions to calculate taxes, so I decided to study the 1C program as a programmer.
+            And I really liked it! It was an interesting experience, after that I couldn’t work as an accountant.
+            This job has become uninteresting to me. I started looking for myself in a new industry.
+            I’ve always liked games and drawing, design. Last year I had experience as a graphic designer,
+            I became interested in website layout and so I came to web development.
+            I love everything beautiful, so website development is a very beauty of programming for me.
+          </p>
+          <img src="./assets/img/about.png" alt="about__image">
+        </div>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="skills__container">
+        <h2 class="title">My skills</h2>
+        
+        <div class="skills__content">
+          <div class="skills-line">
+            <div class="skills-line__content">
+              <h3 class="skills-line__title">HTML5</h3>
+              <p class="skills-line__descr active">
+                60%
+              </p>
+            </div>
+            <div class="skills-line__content">
+              <h3 class="skills-line__title">CSS3</h3>
+              <p class="skills-line__descr">
+                40%
+              </p>
+            </div>
+          </div>
+          <div class="skills-line">
+            <div class="skills-line__content">
+              <h3 class="skills-line__title">JavaScript</h3>
+              <p class="skills-line__descr">
+                20%
+              </p>
+            </div>
+            <div class="skills-line__content">
+              <h3 class="skills-line__title">SASS</h3>
+              <p class="skills-line__descr">
+                20%
+              </p>
+            </div>
+          </div>
+          <div class="skills-line">
+            <div class="skills-line__content">
+              <h3 class="skills-line__title">Figma</h3>
+              <p class="skills-line__descr">
+                70%
+              </p>
+            </div>
+            <div class="skills-line__content">
+              <h3 class="skills-line__title">English</h3>
+              <p class="skills-line__descr">
+                B1
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <div class="projects__container">
+        <h2 class="title">My projects</h2>
+        <div class="projects__content projects__tile">
+            <img src="./assets/img/project_1.png" alt="demo_image">
+            <a class="link link--hover" href="https://api-quotes-silenciomar.netlify.app" target="_blank">DEMO</a>
+        </div>
+      </div>
+    </section>
+    <section class="contacts" id="profile-link">
+      <div class="contacts__container">
+        <h2 class="title">Contacts</h2>
+        
+        <div class="contacts__content">
+          <a class="contacts__link" href="https://discordapp.com/users/689506453039743136" target="_blank">
+            <img src="./assets/icons/discord_icon.svg" alt="discord_icon">
+          </a>
+  
+          <a class="contacts__link" href="https://www.linkedin.com/in/lina-kovalenko-silenciomar/" target="_blank">
+            <img src="./assets/icons/linkedin_icon.svg" alt="linkedin_icon">
+          </a>
+  
+          <a class="contacts__link" href="https://t.me/silencio_mar" target="_blank">
+            <img src="./assets/icons/telegram_icon.svg" alt="telegram_icon">
+          </a>
+  
+          <a class="contacts__link" href="mailto:galina9862@gmail.com">
+            <img src="./assets/icons/mail_icon.svg" alt="mail_icon">
+          </a>
+  
+          <a class="contacts__link" href="tel:+77016709740">
+            <img src="./assets/icons/phone_icon.svg" alt="phone_icon">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <p class="footer__text">
+        <span>© 2022 by Kovalenko Lina</span>
+              © 2022 by Kovalenko Lina
+        <span>© 2022 by Kovalenko Lina</span>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

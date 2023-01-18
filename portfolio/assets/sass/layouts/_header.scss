@@ -1,0 +1,116 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  &__container {
+    @extend %container;
+    display: flex;
+    align-items: center;
+    @include respond(desktop) {
+      justify-content: space-between; // не могу понять почему не применяется
+    }
+  }
+
+  &__logo {
+    display: block;
+    cursor: pointer;
+    max-width: 20%;
+    height: auto;
+  }
+
+  &__nav {
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 3.815px;
+    padding-bottom: 3.815px; // пытаюсь выровнять навигацию с логотипом
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
+}
+
+.menu {
+  &__item {
+    color: $color-white;
+    cursor: pointer;
+    width: calc(100% / 5);
+    text-align: center;
+    text-transform: uppercase;
+    @include respond(tab-land) {
+      text-align: left;
+    }
+  }
+}
+
+.header__btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  cursor: pointer;
+  &.active {
+    z-index: 2;
+  }
+  @include respond(tab-land) {
+    display: block;
+  }
+
+  & span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-pink;
+    transition: all 0.5s;
+    }
+
+    & span:nth-of-type(2) {
+      top: calc(50% - 5px);
+    }
+    & span:nth-of-type(3) {
+      top: calc(50% + 5px);
+    }
+
+    &.active span:nth-of-type(1) {
+      display: none;
+    }
+    &.active span:nth-of-type(2) {
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(45deg);
+    }
+    &.active span:nth-of-type(3) {
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(-45deg);
+    }
+}
+
+.header__burger-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: $color-blue;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+
+  &.active {
+    display: block;
+    transform: translateX(0);
+    z-index: 1;
+  }
+}

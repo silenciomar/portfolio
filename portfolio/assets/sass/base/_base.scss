@@ -1,0 +1,20 @@
+body {
+  background-color: $color-black;
+  font-family: 'M PLUS 1 Code', sans-serif;
+  color: $color-white;
+}
+
+.title {
+  text-align: center;
+
+  @include text-style(38px, 400, $color-pink);
+  font-family: 'Rubik Glitch', cursive;
+
+  @include respond(tab-land) {
+    font-size: 20px;
+  }
+
+  @include respond(phone) {
+    font-size: 16px;
+  }
+}

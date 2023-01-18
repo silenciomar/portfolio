@@ -1,0 +1,81 @@
+.skills {
+
+  &__container {
+    margin-top: 50px;
+    @extend %container;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  &__content {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__content::before {
+    content: "";
+    position: absolute;
+    background-image: url("../../assets/gif/output-onlinegiftools.gif");
+    width: 86px;
+    height: 100%;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.skills-line {
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  @include respond(phone) {
+    width: 90vw;
+  }
+
+  &__content {
+    width: 30vw;
+    height: 115px;
+
+    &:nth-child(n) {
+      text-align: right;
+    }
+    
+    &:nth-child(2n) {
+      text-align: left;
+      margin-top: 76px;
+    }
+  }
+  
+  &__descr {
+    height: 0;
+    overflow: hidden;
+
+    &.active {
+      height: auto;
+      overflow: auto;
+    }
+  }
+  
+  &__title {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    font-family: 'M PLUS 1 Code';
+    color: #e2e0e040;
+
+    &:hover {
+      color: $color-pink;
+    }
+  }
+
+  &__descr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+  }
+}

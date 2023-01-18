@@ -1,0 +1,29 @@
+.link {
+  @include text-style(16px, 400, $color-white);
+  text-align: center;
+  text-transform: uppercase;
+  
+  &--hover:hover {
+    color: $color-pink;
+  }
+
+  &--hover:hover:after {
+    color: $color-pink;
+    content: ">";
+  }
+  
+  &--hover:hover:before {
+    color: $color-pink;
+    content: "<";
+  }
+
+  & span {
+    @include respond(tab-land) {
+      font-size: 14px;
+    }
+  
+    @include respond(tab-land) {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.footer {
+
+  &__container {
+    @extend %container;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  &__text {
+    @include text-style(24px, 400, $color-white);
+    margin: 50px auto;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    animation: glitch 2725ms infinite ease-in;
+  
+    @include respond(tab-land) {
+      font-size: 20px;
+    }
+  
+    @include respond(tab-land) {
+      font-size: 16px;
+    }
+  }
+  
+  &__text span {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  &__text span:first-child {
+    animation: glitch 3500ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    transform: translate(-0.04em, -0.03em);
+    opacity: 0.75;
+  }
+  
+  &__text span:last-child {
+    animation: glitch 3500ms infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    transform: translate(0.04em, 0.03em);
+    opacity: 0.75;
+  }
+}
+
+
+@keyframes glitch {
+  0% {
+    text-shadow: -3px 3px 0 $color-pink, 2px -3px 0 $color-blue;
+  }
+  2% {
+    text-shadow: 3px -3px 0 $color-pink, -2px 3px 0 $color-blue;
+  }
+  4%,
+  100% {
+    text-shadow: none;
+    transform: none;
+  }
+}
