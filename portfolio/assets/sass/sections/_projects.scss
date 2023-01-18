@@ -1,0 +1,26 @@
+.projects {
+  @extend %container;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__tile img {
+    width: 65vw;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  &__tile a {
+    margin: 20px 0;
+    @include text-style(16px, 400, $color-white);
+  } // странно, не сработал общий класс для всех ссылок и пришлось задать цвет ссылке так
+}

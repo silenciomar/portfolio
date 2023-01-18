@@ -1,0 +1,83 @@
+.contacts {
+
+  &__container {
+    @extend %container;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  &__content {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  &__link {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $color-white;
+    border-radius: 50%;
+    padding: 10px;
+    -webkit-animation: contacts__link 200ms 10;
+    animation: contacts__link 200ms 10;
+    margin-left: 20px;
+    margin-top: 30px;
+  
+    @include respond(tab-land) {
+      width: 50px;
+      height: 50px;
+      margin-left: 15px;
+    }
+  
+    @include respond(phone) {
+      width: 40px;
+      height: 40px;
+      margin-left: 10px;
+    }
+  }
+  
+  &__link:first-child {
+    margin-left: 0;
+  }
+  
+  &__link:hover {
+    -webkit-animation: contacts__link 2000ms infinite;
+    animation: contacts__link 2000ms infinite;
+  }
+  
+  &__link img {
+    width: 40px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  
+    @include respond(tab-land) {
+      width: 30px;
+    }
+  
+    @include respond(phone) {
+      width: 20px;
+    }
+  }
+}
+
+
+@keyframes contacts__link {
+  0% {
+    box-shadow: 5px 4px $color-pink, -5px -6px $color-blue;
+  }
+  25% {
+    box-shadow: -5px -6px $color-pink, 5px 4px $color-blue;
+  }
+  50% {
+    box-shadow: 5px -4px $color-pink, -8px 4px $color-blue;
+  }
+  75% {
+    box-shadow: -8px -4px $color-pink, -5px -4px $color-blue;
+  }
+  100% {
+    box-shadow: -5px 0 $color-pink, 5px -4px $color-blue;
+  }
+}
